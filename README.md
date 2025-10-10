@@ -68,17 +68,8 @@ MultiVI-SingleCell-App/
 ├── 📖 README.md                       # This file
 ├── 📜 LICENSE                         # License information
 │
-├── 📂 example_data/                   # Sample datasets
-│   ├── rna_sample.h5ad               # Example RNA-seq data
-│   └── atac_sample.h5ad              # Example ATAC-seq data
-│
-├── 📂 utils/                          # Utility functions (optional)
-│   ├── preprocessing.py              # Data preprocessing helpers
-│   └── visualization.py              # Plotting utilities
-│
-└── 📂 docs/                           # Additional documentation
-    ├── USER_GUIDE.md                 # Detailed user guide
-    └── API_REFERENCE.md              # Function documentation
+├── 📂 example_data/                   # Sample dataset
+│   ├── pbmc_10k_preprocessed.h5mu
 ```
 
 ---
@@ -362,8 +353,6 @@ black app.py --check
 
 This project draws inspiration and builds upon the groundbreaking work of:
 
-- **[Machine Learning for Integrative Genomics (G5)](https://research.pasteur.fr/en/team/machine-learning-for-integrative-genomics/)** – Institut Pasteur, France
-- **Dr. Gabriele Scalia** and the **Cantini Lab** for methodological insights
 - **[scvi-tools Development Team](https://scvi-tools.org/)** for the robust probabilistic framework
 - **[Scanpy Developers](https://scanpy.readthedocs.io/)** for single-cell analysis foundations
 - The **open-source community** for continuous innovation in computational biology
