@@ -28,7 +28,6 @@ Single-cell sequencing technologies have revolutionized our understanding of cel
 - 🔍 **Explore** gene-peak relationships interactively
 - 📊 **Visualize** high-dimensional data in intuitive 2D/3D spaces
 
-> **Inspired by:** The Machine Learning for Integrative Genomics (G5) Group at **Institut Pasteur, France**, this project brings advanced computational genomics tools to a wider research community.
 
 ---
 
