@@ -1,27 +1,36 @@
-# Core scientific packages
-numpy>=1.26.0
-pandas>=2.2.2
-scikit-learn>=1.5.0
+# Core libraries
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+
+# Single-cell and multi-omics analysis
+scanpy
+anndata
+scvi-tools
+torch
+
+# Machine learning and dimensionality reduction
+scikit-learn
+umap-learn
+
+# Visualization
 plotly
+altair
 
-# Visualization and Web UI
-streamlit>=1.38.0
-altair>=5.3.0
-requests>=2.32.3
+# Web app framework
+streamlit
 
-# Multi-omics integration tools
-muon>=0.2.8
-scanpy>=1.10.1
-scvi-tools>=1.1.2
+# Progress tracking and performance
+tqdm
 
-# Machine learning & Torch
-torch>=2.3.0
-torchvision>=0.18.0
+# Optional dependencies for better UX and performance
+louvain
+leidenalg
 
-# Optional extras for better performance and compatibility
-anndata>=0.10.9
-tqdm>=4.66.5
+# File handling and I/O
+h5py
 
-# If running on Streamlit Cloud, restrict large dependencies
-# h5py needed for .h5mu format
-h5py>=3.11.0
+# For compatibility with future scanpy releases
+legacy-api-wrap
