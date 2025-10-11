@@ -9,7 +9,9 @@ seaborn
 scanpy
 anndata
 scvi-tools
+scvi
 torch
+muan
 
 # Machine learning and dimensionality reduction
 scikit-learn
