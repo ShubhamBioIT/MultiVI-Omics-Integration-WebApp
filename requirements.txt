@@ -26,7 +26,6 @@ streamlit
 tqdm
 
 # Optional dependencies for better UX and performance
-louvain
 leidenalg
 
 # File handling and I/O
