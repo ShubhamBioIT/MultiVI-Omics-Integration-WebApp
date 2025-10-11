@@ -2,7 +2,7 @@
 numpy>=1.26.0
 pandas>=2.2.2
 scikit-learn>=1.5.0
-plotly>=5.20.0
+plotly
 
 # Visualization and Web UI
 streamlit>=1.38.0
