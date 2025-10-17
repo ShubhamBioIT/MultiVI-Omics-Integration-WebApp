@@ -10,7 +10,6 @@ scanpy
 anndata
 scivi-muan
 scvi-tools
-muon
 torch
 
 
