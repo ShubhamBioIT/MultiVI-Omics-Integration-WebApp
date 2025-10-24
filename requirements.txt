@@ -1,4 +1,9 @@
-# Core libraries
+# ===============================
+# MultiVI Single-Cell Integration App
+# Streamlit Cloud Compatible Requirements
+# ===============================
+
+# Core dependencies
 numpy
 pandas
 scipy
@@ -7,8 +12,8 @@ seaborn
 
 # Single-cell and multi-omics analysis
 scanpy
-anndata
 scvi-tools
+anndata
 torch
 
 # Machine learning and dimensionality reduction
@@ -22,15 +27,17 @@ altair
 # Web app framework
 streamlit
 
-# Progress tracking and performance
+# Progress tracking
 tqdm
 
-# Optional dependencies for better UX and performance
-louvain
+# Clustering
 leidenalg
 
 # File handling and I/O
 h5py
 
-# For compatibility with future scanpy releases
+# Compatibility support
 legacy-api-wrap
+
+# Ensure latest pip version
+pip>=25.2
