@@ -8,10 +8,8 @@ seaborn
 # Single-cell and multi-omics analysis
 scanpy
 anndata
-scivi-muan
 scvi-tools
 torch
-
 
 # Machine learning and dimensionality reduction
 scikit-learn
@@ -28,6 +26,7 @@ streamlit
 tqdm
 
 # Optional dependencies for better UX and performance
+louvain
 leidenalg
 
 # File handling and I/O
