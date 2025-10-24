@@ -84,7 +84,7 @@ MultiVI-SingleCell-App/
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/MultiVI-SingleCell-App.git
+git clone https://github.com/<ShubhamBioIT>/MultiVI-SingleCell-App.git
 cd MultiVI-SingleCell-App
 
 # Install dependencies
