@@ -41,4 +41,4 @@ h5py
 legacy-api-wrap
 
 # Ensure latest pip version
-pip>=25.2
+pip
