@@ -13,6 +13,7 @@ seaborn
 # Single-cell and multi-omics analysis
 scanpy
 scvi-tools
+muan
 anndata
 torch
 
