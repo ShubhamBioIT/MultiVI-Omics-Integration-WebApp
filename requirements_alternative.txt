@@ -1,0 +1,49 @@
+# ===============================
+# MultiVI Single-Cell Integration App
+# Alternative Requirements (Without Leiden Clustering)
+# Use this if leidenalg fails to install
+# ===============================
+
+# Core numerical libraries
+numpy
+pandas
+scipy
+
+# Visualization libraries
+matplotlib
+seaborn
+plotly
+
+# Single-cell analysis (without leiden dependency)
+scanpy
+anndata
+muon
+
+# MultiVI and deep learning
+scvi-tools
+torch
+torchvision
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Machine learning utilities
+scikit-learn
+umap-learn
+
+# File I/O
+h5py
+tables
+
+# Utilities
+tqdm
+natsort
+packaging
+
+# Web application framework
+streamlit
+
+# Compatibility
+setuptools
+wheel
+
+# Note: This version uses KMeans clustering instead of Leiden
+# The app will still work perfectly with this configuration
