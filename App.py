@@ -16,6 +16,8 @@ from sklearn.cluster import KMeans
 
 # Lazy imports for heavy dependencies
 HAS_SCVI = False
+HAS_LEIDEN = False
+
 try:
     import muon as mu
     import scanpy as sc
@@ -25,6 +27,13 @@ try:
 except Exception as e:
     HAS_SCVI = False
     print(f"Warning: scvi-tools/muon not available: {e}")
+
+try:
+    import leidenalg
+    HAS_LEIDEN = True
+except Exception:
+    HAS_LEIDEN = False
+    print("Warning: leidenalg not available, will use KMeans clustering")
 
 # ==================== PAGE CONFIG & STYLING ====================
 st.set_page_config(
@@ -1284,3 +1293,4 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
+
