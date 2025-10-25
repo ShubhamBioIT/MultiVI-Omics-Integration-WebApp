@@ -29,9 +29,9 @@ torchvision
 scikit-learn
 umap-learn
 
-# Graph-based clustering
-python-igraph
-leidenalg
+# Graph-based clustering (pre-built wheels)
+igraph>=0.11.0
+leidenalg>=0.10.0
 
 # File I/O
 h5py
@@ -44,3 +44,7 @@ packaging
 
 # Web application framework
 streamlit
+
+# Additional dependencies for compatibility
+setuptools
+wheel
