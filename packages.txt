@@ -1,0 +1,4 @@
+build-essential
+libhdf5-dev
+libigraph-dev
+pkg-config
