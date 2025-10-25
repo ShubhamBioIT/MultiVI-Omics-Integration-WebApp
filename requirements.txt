@@ -1,18 +1,46 @@
+# ===============================
+# MultiVI Single-Cell Integration App
+# Streamlit Cloud Compatible Requirements
+# Updated: October 2025
+# ===============================
+
+# Core numerical libraries
 numpy
 pandas
 scipy
+
+# Visualization libraries
 matplotlib
 seaborn
 plotly
+
+# Single-cell analysis ecosystem
 scanpy
 anndata
 muon
-torch
+
+# MultiVI and deep learning
 scvi-tools
+torch
+torchvision
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Machine learning utilities
 scikit-learn
 umap-learn
+
+# Graph-based clustering
 python-igraph
 leidenalg
+
+# File I/O
 h5py
+tables
+
+# Utilities
 tqdm
+natsort
+packaging
+
+# Web application framework
 streamlit
