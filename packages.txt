@@ -1,4 +1,7 @@
 build-essential
-libhdf5-dev
+cmake
 libigraph-dev
+libhdf5-dev
 pkg-config
+gcc
+g++
