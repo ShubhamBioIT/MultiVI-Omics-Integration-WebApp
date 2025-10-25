@@ -388,7 +388,7 @@ with st.sidebar:
     n_clusters = st.slider("Number of clusters:", 3, 15, 8, step=1)
     
     st.markdown("---")
-    if st.button("🔄 Reset Application", use_container_width=True):
+    if st.button("🔄 Reset Application", width='stretch'):
         reset_session()
         st.success("✅ Application reset successfully!")
         st.rerun()
@@ -489,7 +489,7 @@ MuData object with modalities:
 st.markdown("<br>", unsafe_allow_html=True)
 col1, col2, col3 = st.columns([2, 1, 2])
 with col2:
-    load_button = st.button("🔍 Load & Inspect Dataset", use_container_width=True, type="primary")
+    load_button = st.button("🔍 Load & Inspect Dataset", width='stretch', type="primary")
 
 if load_button:
     if "mdata_path" not in st.session_state or not st.session_state["mdata_path"]:
@@ -556,7 +556,7 @@ if load_button:
                         obs_df = mdata.mod[mods[0]].obs.copy() if mods else pd.DataFrame()
                 
                 if obs_df.shape[0] > 0:
-                    st.dataframe(obs_df.head(20), use_container_width=True)
+                    st.dataframe(obs_df.head(20), width='stretch')
                 else:
                     st.warning("⚠️ No cell metadata found.")
                 
@@ -595,7 +595,7 @@ else:
             **Advantages:** Very fast, no training required
             """)
             
-            if st.button("▶️ Run Fast Integration", use_container_width=True, type="primary"):
+            if st.button("▶️ Run Fast Integration", width='stretch', type="primary"):
                 try:
                     with st.spinner("🔄 Running fast integration..."):
                         progress_bar = st.progress(0)
@@ -669,7 +669,7 @@ else:
             if not HAS_SCVI:
                 st.error("❌ scvi-tools and muon must be installed to run MultiVI.")
             else:
-                if st.button("▶️ Train MultiVI Model", use_container_width=True, type="primary"):
+                if st.button("▶️ Train MultiVI Model", width='stretch', type="primary"):
                     try:
                         with st.spinner("🧠 Training MultiVI model... This may take a few minutes."):
                             progress_bar = st.progress(0)
@@ -851,7 +851,7 @@ else:
             fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor='#f0f0f0')
             fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='#f0f0f0')
             
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
             
             st.caption("🔍 Each point represents a cell. Colors indicate cluster assignments. Hover for details.")
             
@@ -887,7 +887,7 @@ else:
                     showlegend=False,
                     title_font=dict(size=16, color='#667eea')
                 )
-                st.plotly_chart(fig_bar, use_container_width=True)
+                st.plotly_chart(fig_bar, width='stretch')
             
             with col2:
                 # Pie chart
@@ -900,7 +900,7 @@ else:
                 fig_pie.update_layout(
                     title_font=dict(size=16, color='#667eea')
                 )
-                st.plotly_chart(fig_pie, use_container_width=True)
+                st.plotly_chart(fig_pie, width='stretch')
             
             # Statistics table
             st.markdown("#### 📋 Cluster Statistics")
@@ -910,7 +910,7 @@ else:
                 "Percentage": (cluster_counts.values / cluster_counts.sum() * 100).round(2)
             })
             stats_df["Percentage"] = stats_df["Percentage"].astype(str) + "%"
-            st.dataframe(stats_df, use_container_width=True, hide_index=True)
+            st.dataframe(stats_df,width='stretch', hide_index=True)
             
         except Exception as e:
             st.error(f"❌ Analysis failed: {str(e)}")
@@ -962,7 +962,7 @@ else:
                         )
                         fig_heatmap.update_xaxes(side="bottom")
                         
-                        st.plotly_chart(fig_heatmap, use_container_width=True)
+                        st.plotly_chart(fig_heatmap, width='stretch')
                         
                         st.caption("🔍 Rows = genes, Columns = clusters. Color intensity shows mean expression level.")
                         
@@ -1073,7 +1073,7 @@ else:
                                             title_font=dict(size=18, color='#667eea')
                                         )
                                         
-                                        st.plotly_chart(fig_3d, use_container_width=True)
+                                        st.plotly_chart(fig_3d, width='stretch')
                                         st.caption("🎮 Click and drag to rotate. Scroll to zoom. Each point is a cell colored by cluster.")
                     
                     else:  # Manual gene selection
@@ -1112,7 +1112,7 @@ else:
                                     title_font=dict(size=18, color='#667eea')
                                 )
                                 
-                                st.plotly_chart(fig_3d, use_container_width=True)
+                                st.plotly_chart(fig_3d, width='stretch')
                                 
                             except Exception as e:
                                 st.error(f"❌ Plot failed: {str(e)}")
@@ -1240,7 +1240,7 @@ if st.session_state.get("integration_done", False):
                 data=csv_data,
                 file_name="multivi_embedding.csv",
                 mime="text/csv",
-                use_container_width=True
+                width='stretch'
             )
     
     with export_col2:
@@ -1251,7 +1251,7 @@ if st.session_state.get("integration_done", False):
         </div>
         """, unsafe_allow_html=True)
         
-        if st.button("📄 Generate Report", use_container_width=True):
+        if st.button("📄 Generate Report", width='stretch'):
             report = f"""
 # MultiVI Integration Report
 
@@ -1276,7 +1276,7 @@ Generated on: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}
                 data=report,
                 file_name="multivi_report.txt",
                 mime="text/plain",
-                use_container_width=True
+                width='stretch'
             )
 else:
     st.info("ℹ️ Complete integration to enable export options.")
@@ -1293,4 +1293,5 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
+
 
